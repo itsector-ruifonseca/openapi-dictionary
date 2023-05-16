@@ -1,5 +1,4 @@
-accountnumber:
-  type: string
-  pattern: '^\d{12}$'
-  description: internal account number
-  example: '023103345456'
+type: string
+pattern: '^\d{12}$'
+description: internal account number
+example: '023103345456'
