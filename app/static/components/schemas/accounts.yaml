@@ -1,0 +1,90 @@
+---
+openapi: 3.0.1
+info:
+  title: bus-oeld-currentaccount
+  description: Current Account
+  version: 1.0.0
+components:
+  schemas:
+    Date:
+      type: string
+      format: date
+
+    StatementNumber:
+      type: integer
+      format: int64
+      description: statement number
+      maximum: 999999999999999
+      minimum: 0
+      example: '061100000050'
+
+    AccountNumber:
+      type: string
+      description: Account Number
+      minLength: 12
+      maxLength: 12
+      pattern: '^\d{12}$'
+      example: '061100000050'
+
+
+    Datetime:
+      type: object
+      properties:
+        dateTimeContent:
+          type: string
+          description: ''
+          format: string
+        timeZoneCode:
+          type: string
+          description: ''
+          format: string
+        daylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+
+    Amount:
+      type: object
+      description: Record of accured interest
+      properties:
+        amountValue:
+          type: string
+          description: ''
+          format: string
+        amountCurrency:
+          $ref: '#/components/schemas/Currency'
+
+    Currency:
+      type: object
+      description: 'Amount Currency'
+      properties:
+        currencyCode:
+          type: string
+          maxLength: 3
+          description: Código Moeda
+
+
+    Link:
+      type: object
+      properties:
+        rel:
+          type: string
+        href:
+          type: string
+        hreflang:
+          type: string
+        media:
+          type: string
+        title:
+          type: string
+        type:
+          type: string
+        deprecation:
+          type: string
+        profile:
+          type: string
+        name:
+          type: string
+
+
