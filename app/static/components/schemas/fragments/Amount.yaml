@@ -6,4 +6,4 @@ properties:
     description: ''
     format: string
   amountCurrency:
-    $ref: '#/components/schemas/Currency'
+    $ref: './Currency.yaml'

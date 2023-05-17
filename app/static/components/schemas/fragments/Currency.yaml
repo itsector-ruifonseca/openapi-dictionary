@@ -1,0 +1,10 @@
+type: object
+properties:
+  currencyCode:
+    type: string
+    description: 'Currency Code'
+    example: 'EUR'
+  currencyDesc:
+    type: string
+    description: 'Currency description'
+    example: 'Euro'
