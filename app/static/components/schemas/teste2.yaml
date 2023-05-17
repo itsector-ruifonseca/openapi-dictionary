@@ -1,0 +1,15 @@
+---
+openapi: 3.0.1
+info:
+  title: bus-oeld-currentaccount
+  description: Current Account
+  version: 1.0.0
+components:
+  schemas:
+    AccountBalanceResponse:
+      type: object
+      properties:
+        balances:
+          type: array
+          items:
+            $ref: './fragments/AccountBalance.yaml'

@@ -1,0 +1,32 @@
+type: object
+properties:
+  accountBalanceType:
+    type: string
+    description: 'Account Balance Type'
+    enum:
+      - ACCOUNTING
+      - AUTHORIZED
+      - AVAILABLE
+      - OVERDRAFT
+      - CAPTIVE
+      - UNAVAILABLE
+      - DAY_OPENING
+      - AVERAGE_PREVIOUS_YEAR
+      - AVERAGE_CURRENT_YEAR
+      - QUARTERLY_AVERAGE
+      - SEMESTER_AVERAGE
+      - AVERAGE_YEARLY
+      - MONTH_1
+      - MONTH_2
+      - MONTH_3
+      - CREDIT_OR_MONTH_1
+      - CREDIT_OR_MONTH_2
+      - CREDIT_OR_MONTH_3
+      - DEBT_OR_MONTH_1
+      - DEBT_OR_MONTH_2
+      - DEBT_OR_MONTH_3
+      - INTEREST_DEBT
+      - ARREAR_DEBT
+      - COMISSION_DEBT
+      - TAX_DEBT
+      - DEBT

@@ -1,0 +1,6 @@
+type: string
+description: Account Number
+minLength: 12
+maxLength: 12
+pattern: '^\d{12}$'
+example: '061100000050'
