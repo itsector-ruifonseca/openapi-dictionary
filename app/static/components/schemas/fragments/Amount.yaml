@@ -1,0 +1,9 @@
+type: object
+description: Record of accured interest
+properties:
+  amountValue:
+    type: string
+    description: ''
+    format: string
+  amountCurrency:
+    $ref: '#/components/schemas/Currency'

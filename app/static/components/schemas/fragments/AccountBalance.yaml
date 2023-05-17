@@ -30,3 +30,13 @@ properties:
       - COMISSION_DEBT
       - TAX_DEBT
       - DEBT
+  accountBalance:
+    $ref: './Amount.yaml'
+  accountBalanceDate:
+    $ref: './Datetime.yaml'
+  accountBalanceDays:
+    description: 'Dias ?'
+    type: string
+    example: 31
+  teste:
+    $ref: './AccountNumber.yaml'

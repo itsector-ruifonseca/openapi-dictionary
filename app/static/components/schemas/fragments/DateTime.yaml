@@ -1,0 +1,15 @@
+type: object
+properties:
+  dateTimeContent:
+    type: string
+    description: ''
+    format: string
+  timeZoneCode:
+    type: string
+    description: ''
+    format: string
+  daylightSavingIndicator:
+    type: string
+    description: ''
+    format: string
+description: ''
