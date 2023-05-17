@@ -1,0 +1,96 @@
+---
+openapi: 3.0.1
+info:
+  title: bus-oeld-currentaccount
+  description: Current Account
+  version: 1.0.0
+components:
+  schemas:
+    AccountBalanceResponse:
+      type: object
+      properties:
+        balances:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccountBalance'
+
+    AccountBalance:
+      type: object
+      properties:
+        accountBalanceType:
+          type: string
+          description: 'Account Balance Type'
+          enum:
+            - ACCOUNTING
+            - AUTHORIZED
+            - AVAILABLE
+            - OVERDRAFT
+            - CAPTIVE
+            - UNAVAILABLE
+            - DAY_OPENING
+            - AVERAGE_PREVIOUS_YEAR
+            - AVERAGE_CURRENT_YEAR
+            - QUARTERLY_AVERAGE
+            - SEMESTER_AVERAGE
+            - AVERAGE_YEARLY
+            - MONTH_1
+            - MONTH_2
+            - MONTH_3
+            - CREDIT_OR_MONTH_1
+            - CREDIT_OR_MONTH_2
+            - CREDIT_OR_MONTH_3
+            - DEBT_OR_MONTH_1
+            - DEBT_OR_MONTH_2
+            - DEBT_OR_MONTH_3
+            - INTEREST_DEBT
+            - ARREAR_DEBT
+            - COMISSION_DEBT
+            - TAX_DEBT
+            - DEBT
+        accountBalance:
+          $ref: '#/components/schemas/Amount'
+        accountBalanceDate:
+          $ref: '#/components/schemas/Datetime'
+        accountBalanceDays:
+          description: 'Dias ?'
+          type: string
+          example: 31
+        teste:
+          $ref: 'https://raw.githubusercontent.com/itsector-ruifonseca/openapi-dictionary/main/app/static/components/schemas/accounts.yaml#/components/schemas/AccountNumber'
+
+    Datetime:
+      type: object
+      properties:
+        dateTimeContent:
+          type: string
+          description: ''
+          format: string
+        timeZoneCode:
+          type: string
+          description: ''
+          format: string
+        daylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+
+    Amount:
+      type: object
+      description: Record of accured interest
+      properties:
+        amountValue:
+          type: string
+          description: ''
+          format: string
+        amountCurrency:
+          $ref: '#/components/schemas/Currency'
+
+    Currency:
+      type: object
+      description: 'Amount Currency'
+      properties:
+        currencyCode:
+          type: string
+          maxLength: 3
+          description: Código Moeda
