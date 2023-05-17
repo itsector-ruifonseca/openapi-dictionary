@@ -33,7 +33,7 @@ properties:
   accountBalance:
     $ref: './Amount.yaml'
   accountBalanceDate:
-    $ref: './Datetime.yaml'
+    $ref: './DateTime.yaml'
   accountBalanceDays:
     description: 'Dias ?'
     type: string
